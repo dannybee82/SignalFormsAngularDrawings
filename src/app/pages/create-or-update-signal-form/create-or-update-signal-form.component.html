@@ -1,0 +1,70 @@
+<form (submit)="submit($event)">
+  <div class="row">
+    <div class="column p-1">
+      <div class="row">
+        <mat-form-field>
+          <mat-label>Title</mat-label>
+          <input matInput type="text" [field]="drawingForm.title" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <mat-label>Description</mat-label>
+          <textarea matInput [field]="drawingForm.description" [rows]="5" [cols]="20"></textarea>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field>
+          <mat-label>Draughtsman</mat-label>
+          <input type="text" matInput [field]="drawingForm.draughtsman" />
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <div class="column">
+          <app-rating [field]="drawingForm.rating"></app-rating>
+        </div>
+        <div class="row fx-align-center text-current-rating ms-1">
+          <strong class="me-1">Current Rating:</strong>{{ drawingForm.rating().value() < 0 ? '' : drawingForm.rating().value() }}
+        </div>
+      </div>      
+      <div class="row mt-1">
+        <button type="submit" mat-raised-button color="primary">
+          <mat-icon>save</mat-icon>
+          {{ isUpdateMode() ? 'Update' : 'Create' }}
+        </button>
+        @if(isUpdateMode()) {
+          <button type="button" class="ms-1" mat-raised-button color="warn" (click)="delete()">
+            <mat-icon>delete</mat-icon>
+            Delete
+          </button>
+        }        
+      </div>
+    </div>
+    <div class="column p-1">
+      <div class="row mt-1">
+        <app-open-file
+          [buttonText]="'Open image file'"
+          [fileExtensions]="'.jpg,.png,.jpeg,.gif'"
+          [matIcon]="'image'"
+          [allowMultipleSelection]="false"
+          (selectedFile)="loadFile($event)"
+        >
+        </app-open-file>
+        @if(drawingForm.image().value() !== '') {
+        <img class="preview-image me-1 ms-1" [src]="drawingForm.image().value()" alt="Preview" title="Preview" />
+        <div class="column">
+          <button
+            type="button"
+            mat-stroked-button
+            color="warn"
+            matTooltip="Remove image"
+            (click)="removeFile()">
+            <mat-icon>delete</mat-icon>
+            <span>Remove Image</span>
+          </button>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,22 @@
+.rating-container {
+    width: 300px;
+    height: 48px;
+    background-color: lightgrey;
+    padding: 24px;
+}
+
+.rating-container:hover {
+    cursor: pointer;
+}
+
+.star-size {
+    pointer-events: none;
+}
+
+.custom-ms {
+    margin-left: 6px;
+}
+
+.custom-me {
+    margin-right: 6px;
+}

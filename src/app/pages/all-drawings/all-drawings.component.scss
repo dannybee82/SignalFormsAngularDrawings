@@ -1,0 +1,24 @@
+.drawings-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;    
+    padding: 0px 32px 32px 32px;
+}
+
+.drawing-card {
+  max-width: 350px;
+}
+
+.thumbnail {
+    max-width: 350px;
+    height: auto;
+    max-height: 350px;
+}
+
+.thumbnail:hover {
+  cursor: pointer;
+  border: 1px solid whitesmoke;
+  border-radius: 7px;
+}

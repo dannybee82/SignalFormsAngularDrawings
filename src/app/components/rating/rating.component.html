@@ -1,0 +1,11 @@
+<div class="row rating-container" #ratingDiv (click)="setCurrentRating()">
+    @for(rating of getRating(); track $index) {
+        @if(rating === 0) {
+            <img src="stars/custom_star_empty.png" class="custom-ms custom-me">
+        } @else if(rating === 1) {
+            <img src="stars/custom_star_filled.png" class="custom-ms custom-me ">
+        } @else if(rating === 2) {
+            <img src="stars/cusom_star_half.png" class="custom-ms custom-me">
+        }
+    }
+</div>

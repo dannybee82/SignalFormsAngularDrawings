@@ -1,0 +1,11 @@
+<div class="row fx-start">
+    @for(rating of showRating(); track $index) {
+        @if(rating === 0) {
+            <img src="stars/custom_star_empty.png" class="star-size">
+        } @else if(rating === 1) {
+            <img src="stars/custom_star_filled.png" class="star-size">
+        } @else if(rating === 2) {
+            <img src="stars/cusom_star_half.png" class="star-size">
+        }
+    }
+</div>

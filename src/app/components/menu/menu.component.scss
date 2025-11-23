@@ -1,0 +1,23 @@
+li {
+    list-style: none;
+}
+
+ul li {
+    float: left;
+    margin-right: 8px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+    border-radius: 5px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}

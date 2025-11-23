@@ -1,0 +1,20 @@
+<nav class="container-flex-row ">    
+    <ul>
+        <li>
+            <img src="drawings_signal_forms_logo.png" alt="Drawings Signal Forms" title="Drawings Signal Forms" class="logo" [routerLink]="['/']">
+        </li>
+        <li>
+            <button type="button" mat-raised-button color="primary" [routerLink]="['/']">
+                <mat-icon>home</mat-icon>
+                <span>Home</span>
+            </button>
+        </li>
+        <li>
+            <button type="button" mat-raised-button color="primary" [routerLink]="['create-or-update-drawing', undefined]">
+                <mat-icon>draw</mat-icon>
+                <span>Add Drawing</span>
+            </button>
+        </li>
+    </ul>
+</nav>
+<router-outlet></router-outlet>

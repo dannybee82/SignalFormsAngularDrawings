@@ -1,0 +1,26 @@
+.h-90 {
+    height: 90%;
+}
+
+.bg-grey {
+    background-color: lightgrey;
+}
+
+.text-click-close {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    background-color: #595959;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    padding: 8px;
+    z-index: 10;
+    font-size: large;
+    font-weight: 800;
+}
+
+.text-click-close:hover {
+    cursor: pointer;
+    background-color: darkgrey;
+}

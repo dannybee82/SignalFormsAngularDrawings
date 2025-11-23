@@ -1,0 +1,30 @@
+<div class="drawings-grid">
+    @if(allDrawings | async; as drawings) {
+        @for(drawing of drawings; track drawing.id) {
+            <mat-card class="drawing-card" appearance="outlined">
+                <mat-card-header>
+                    <mat-card-title>{{ drawing.title }}</mat-card-title>
+                    <mat-card-subtitle>{{ drawing.draughtsman }}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image class="thumbnail" [src]="drawing.image" [alt]="drawing.title" [title]="drawing.title" (click)="imageFullScreen(drawing.image, drawing.title)">
+                <mat-card-content>
+                    <p>
+                        {{ drawing.description }}
+                    </p>
+                    <app-show-stars [rating]="drawing.rating" />
+                </mat-card-content>
+                <mat-card-actions>
+                    <button type="button" matButton (click)="imageFullScreen(drawing.image, drawing.title)">
+                        <mat-icon>fullscreen</mat-icon>
+                        Fullscreen
+                    </button>
+                    <button type="button" matButton [routerLink]="['/create-or-update-drawing', drawing.id]">
+                        <mat-icon>edit</mat-icon>
+                        Edit
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        }
+    }
+</div>
+<app-scroll-to-top />
