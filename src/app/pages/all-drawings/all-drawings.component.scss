@@ -9,16 +9,32 @@
 
 .drawing-card {
   max-width: 350px;
+  justify-content: space-between;
 }
 
 .thumbnail {
-    max-width: 350px;
-    height: auto;
-    max-height: 350px;
+  max-width: 100% !important;  
+  max-height: 275px !important;  
+  width: auto !important;  
+  height: auto !important;  
+  object-fit: contain;  
 }
 
 .thumbnail:hover {
   cursor: pointer;
   border: 1px solid whitesmoke;
   border-radius: 7px;
+}
+
+.drawing-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.drawing-card-actions {
+  justify-content: center;
+}
+
+app-show-stars {
+  width: fit-content;
 }

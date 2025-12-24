@@ -32,7 +32,7 @@ export class OpenFileComponent {
         if(element.files) {
           const arr: File[] = [];
 
-          for(let i = 0; element.files.length; i++) {
+          for(let i = 0; i < element.files.length; i++) {
             arr.push(element.files[i]);
           }
 

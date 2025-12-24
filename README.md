@@ -1,6 +1,6 @@
 # SignalFormsAngularDrawings
 
-An _Angular 21_ application (with [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0) and _Angular Materials_.
+An _Angular 21_ application (with [Angular CLI](https://github.com/angular/angular-cli) version 21.0.4) and _Angular Materials_.
 
 This demo shows the new and experimental _Signal Forms_ with hard-coded data.
 
@@ -8,6 +8,7 @@ This demo shows the new and experimental _Signal Forms_ with hard-coded data.
 *   Create a new Drawing or Update a Drawing.
 *   Show a Drawing Fullscreen.
 *   Delete a Drawing.
+*   Custom component: _ShowStarsComponent_ that is used in the _signal form_.
 
 See the _root_ of this project for more example images.
 
@@ -34,6 +35,18 @@ _ng s --o_
 Note: the application runs on: http://localhost:4200
 
 ### **Changelog:**
+
+_December 2025_
+
+\- Upgraded packages.
+
+\- Added 5 additional drawings.
+
+\- CSS fix for resizing the images & other CSS changes.
+
+\- Some other minor changes.
+
+\- Updated Example Images.
 
 _November 2025_
 

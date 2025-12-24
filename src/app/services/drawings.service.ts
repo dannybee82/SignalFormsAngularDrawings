@@ -87,6 +87,46 @@ export class DrawingsService {
       draughtsman: 'Lucien Delacroix',
       rating: 3.5,
     },
+    {
+      id: 11,
+      image: 'drawings/drawing_011.jpg',
+      title: 'The Fountain of Youth',
+      description: '',
+      draughtsman: 'Lucien Delacroix',
+      rating: 3,
+    },
+    {
+      id: 12,
+      image: 'drawings/drawing_012.jpg',
+      title: 'A Wine drinking Monk',
+      description: '',
+      draughtsman: 'Lucien Delacroix',
+      rating: 3,
+    },
+    {
+      id: 13,
+      image: 'drawings/drawing_013.jpg',
+      title: 'Eye of the Manticore',
+      description: '',
+      draughtsman: 'Lucien Delacroix',
+      rating: 3.5,
+    },
+    {
+      id: 14,
+      image: 'drawings/drawing_014.jpg',
+      title: 'Perchance a Dream',
+      description: '',
+      draughtsman: 'Lucien Delacroix',
+      rating: 4,
+    },
+    {
+      id: 15,
+      image: 'drawings/drawing_015.jpg',
+      title: 'Lumina the Celestial Weaver',
+      description: '',
+      draughtsman: 'Lucien Delacroix',
+      rating: 4,
+    },
   ];
 
   getAll(): Observable<Drawing[]> {
